@@ -3,7 +3,7 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 /[Ll]ibrary/
-Proyecto_Final/[Tt]emp/
+ProyectoFinal/[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
