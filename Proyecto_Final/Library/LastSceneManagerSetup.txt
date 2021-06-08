@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/Scenes/olimpica.unity
-=======
-- path: Assets/olimpica.unity
->>>>>>> Stashed changes
+- path: Assets/Scenes/RevolucionMap.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
