@@ -9,6 +9,7 @@
 /Proyecto_Final/[Bb]uilds/
 /Proyecto_Final/[Ll]ogs/
 /Proyecto_Final/[Mm]emoryCaptures/
+<<<<<<< HEAD
 # /actualizacion_juego/[Ll]ibrary/
 # /actualizacion_juego/[Tt]emp/
 # /actualizacion_juego/[Oo]bj/
@@ -16,6 +17,9 @@
 # /actualizacion_juego/[Bb]uilds/
 # /actualizacion_juego/[Ll]ogs/
 # /actualizacion_juego/[Mm]emoryCaptures/
+=======
+
+>>>>>>> parent of 066b1ff (Update .gitignore)
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
