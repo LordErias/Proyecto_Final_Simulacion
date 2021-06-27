@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   ded: {fileID: 8110599822935388029, guid: 3002e73fcc83c614da0e966a742e2e73, type: 3}
-  speed: 10
+  speed: 5
   target: {fileID: 0}
   wavepointIndex: 0
 --- !u!54 &-1292729880078247622
