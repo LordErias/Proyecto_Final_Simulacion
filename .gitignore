@@ -9,13 +9,7 @@
 /Proyecto_Final/[Bb]uilds/
 /Proyecto_Final/[Ll]ogs/
 /Proyecto_Final/[Mm]emoryCaptures/
-/actualizacion juego/[Ll]ibrary/
-/actualizacion juego/[Tt]emp/
-/actualizacion juego/[Oo]bj/
-/actualizacion juego/[Bb]uild/
-/actualizacion juego/[Bb]uilds/
-/actualizacion juego/[Ll]ogs/
-/actualizacion juego/[Mm]emoryCaptures/
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
