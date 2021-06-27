@@ -9,13 +9,13 @@
 /Proyecto_Final/[Bb]uilds/
 /Proyecto_Final/[Ll]ogs/
 /Proyecto_Final/[Mm]emoryCaptures/
-/actualizacion_juego/[Ll]ibrary/
-/actualizacion_juego/[Tt]emp/
-/actualizacion_juego/[Oo]bj/
-/actualizacion_juego/[Bb]uild/
-/actualizacion_juego/[Bb]uilds/
-/actualizacion_juego/[Ll]ogs/
-/actualizacion_juego/[Mm]emoryCaptures/
+# /actualizacion_juego/[Ll]ibrary/
+# /actualizacion_juego/[Tt]emp/
+# /actualizacion_juego/[Oo]bj/
+# /actualizacion_juego/[Bb]uild/
+# /actualizacion_juego/[Bb]uilds/
+# /actualizacion_juego/[Ll]ogs/
+# /actualizacion_juego/[Mm]emoryCaptures/
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
