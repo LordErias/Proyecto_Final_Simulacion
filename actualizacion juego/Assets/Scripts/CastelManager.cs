@@ -6,14 +6,18 @@ using UnityEngine;
 public class CastelManager : MonoBehaviour
 {
 
+    public int maxHealth = 100;
     public int vida = 100;
+
+    public HealtBar healthBar;
     public ParticleSystem dead;
     public GameObject PhysicBody;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        vida = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -58,5 +62,6 @@ public class CastelManager : MonoBehaviour
             Destroy(other.gameObject);
         }
         print(vida);
+        healthBar.SetHealth(vida);
     }
 }

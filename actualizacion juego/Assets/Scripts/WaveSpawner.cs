@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -8,59 +9,70 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 10f;
     public float timeBeteenEnemies = 1f;
     public float countdownWaves = 2f;
-    public float countdownEnemies = 2f;
 
-    private int waveNumber = 1;
+    public CastelManager castleManager;
+
+    private int waveIndex = 0;
     public GameObject spawners;
     private GameObject[] enemies;
-    private Stack<int> enemiesStack;
-    private int EnemiesLeft;
-    public bool onWave = false;
-    
+
+
+    public Text waveCountdownText;    
+    public GameObject waveContCountainer;
+    public Text totalEnemies;    
+    public Text enemiesLeft; 
+    public GameObject enemiesContainer;   
+    public GameObject gameOverScreen;   
+    public GameObject healthBar;
+
     void Start()
     {
-        enemiesStack = new Stack<int>();
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        EnemiesLeft = 0;
+        enemiesLeft.text = enemies.Length.ToString();
     }
 
     void Update()
     {
-        if (countdownWaves <= 0)
+        if (castleManager.vida > 0)
         {
-            countdownWaves = timeBetweenWaves;
-        }
-        if (enemies.Length < 1 && countdownWaves <= 0)
-        {
-            spawnWave();
-            // onWave = true;
-        }
-        if (countdownEnemies <= 0 && EnemiesLeft > 0 )
-        {
-            spawnEnemy();
-            EnemiesLeft = enemiesStack.Pop();
-            if (EnemiesLeft == 0)
+            gameOverScreen.SetActive(false);
+            if (countdownWaves <= 0)
             {
-                // onWave = false;
+                countdownWaves = timeBetweenWaves;
+                StartCoroutine(spawnWave());
             }
-            countdownEnemies = timeBeteenEnemies;
+            if (enemies.Length > 0)
+            {
+                waveContCountainer.SetActive(false);
+                enemiesContainer.SetActive(true);
+                countdownWaves = timeBetweenWaves;
+            } else {
+                waveContCountainer.SetActive(true);
+                enemiesContainer.SetActive(false);
+                countdownWaves -= Time.deltaTime;
+
+            }
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            enemiesLeft.text = enemies.Length.ToString();
+            waveCountdownText.text = Mathf.FloorToInt(countdownWaves + 1).ToString();
+        } else {
+            gameOverScreen.SetActive(true);
+            waveContCountainer.SetActive(false);
+            enemiesContainer.SetActive(false);
+            healthBar.SetActive(false);
         }
-
-
-        countdownEnemies -= Time.deltaTime;
-        countdownWaves -= Time.deltaTime;
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
-    void spawnWave(){
-        int enemyCount = waveNumber * waveNumber + 1;
+    IEnumerator spawnWave(){
+        waveIndex ++;
+        int enemyCount = waveIndex * waveIndex + 1;
+        totalEnemies.text = enemyCount.ToString();
         print(enemyCount);
         for (int i = 0; i < enemyCount; i++)
         {
-            enemiesStack.Push(i);
+            spawnEnemy();
+            yield return new WaitForSeconds(timeBeteenEnemies);
         }
-        EnemiesLeft = enemiesStack.Peek();
-        waveNumber ++;
     }
     void spawnEnemy(){
         spawners.GetComponent<SpawnManager>().spawnNewEnemy();
