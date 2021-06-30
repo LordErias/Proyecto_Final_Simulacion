@@ -1,8 +1,9 @@
 Android
 PlayerPath?
-C:/Users/josue/OneDrive/Escritorio/juego prueba2.apk
+C:/Users/josue/OneDrive/Escritorio/juego prueba5.apk
 SceneListBegin?
-Assets/juego.unity
+Assets/Scenes/juego.unity
+Assets/Scenes/Menu.unity
 SceneListEnd?
 23e997fdf6bd6b87fc7a011baedd0aba Assembly-CSharp.dll:.PlayerWeaponManager
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -217,3 +218,5 @@ f0077b931a26a7eeaf5e245c7ef51ec4 Assembly-CSharp.dll:.GvrPointerInputModule
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GvrXREventsSubscriber
 719e5a8f63dda20dad1ba86875c22268 Assembly-CSharp.dll:GoogleVR.VideoDemo.AutoPlayVideo
 9ef0ed9504edb9d0914e240dee1b7846 Assembly-CSharp.dll:GoogleVR.Beta.GvrBetaControllerVisualMulti
+cc5478138c80ff50d700c3f55dddbe65 Assembly-CSharp.dll:.PlayerGrap
+0dd890bf07692185d01ff9cd9f8756ff Assembly-CSharp.dll:.Grap
